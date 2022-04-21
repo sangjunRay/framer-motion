@@ -1,20 +1,16 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-const Container = styled.section`
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-`;
-
 const BoxContainer = styled.div`
 	display: flex;
 	flex-direction: column;
+	margin: 3rem;
 `;
 
 const Card = styled(motion.div)`
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	box-sizing: border-box;
 	width: 300px;
 	height: 200px;
@@ -23,18 +19,23 @@ const Card = styled(motion.div)`
 	border-radius: 10px;
 	padding: 1rem;
 	margin-top: 1rem;
+	font-size: 1.2rem;
+	font-weight: 600;
 `;
+
+const cardVariants = {
+	start: { scale: 0 },
+	end: { scale: 1, rotateZ: 360, transition: { type: 'spring', damping: 7 } },
+};
 
 function Motion1(): JSX.Element {
 	return (
-		<Container>
-			<BoxContainer>
-				Motion example 1.
-				<Card transition={{ type: 'spring', damping: 7 }} initial={{ scale: 0 }} animate={{ scale: 1, rotateZ: 360 }}>
-					motion component
-				</Card>
-			</BoxContainer>
-		</Container>
+		<BoxContainer>
+			Motion example 1.
+			<Card variants={cardVariants} initial="start" animate="end">
+				spring motion
+			</Card>
+		</BoxContainer>
 	);
 }
 

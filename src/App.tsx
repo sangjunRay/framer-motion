@@ -1,6 +1,15 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import Motion1 from './components/motion1';
+import Motion2 from './components/motion2';
+
+const Container = styled.section`
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
 
 const Globalstyled = createGlobalStyle`
  /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -57,10 +66,11 @@ table {
 
 function App() {
 	return (
-		<>
+		<Container>
 			<Globalstyled />
 			<Motion1 />
-		</>
+			<Motion2 />
+		</Container>
 	);
 }
 
