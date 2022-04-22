@@ -4,6 +4,7 @@ import Motion1 from './components/motion1';
 import Motion2 from './components/motion2';
 import Motion3 from './components/motion3';
 import Motion4 from './components/motion4';
+import Motion5 from './components/motion5';
 
 const Container = styled.section`
 	width: 100vw;
@@ -98,6 +99,7 @@ function App() {
 				<Motion2 />
 				<Motion3 />
 				<Motion4 />
+				<Motion5 />
 			</Container>
 		</>
 	);
