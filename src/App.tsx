@@ -3,12 +3,14 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Motion1 from './components/motion1';
 import Motion2 from './components/motion2';
 import Motion3 from './components/motion3';
+import Motion4 from './components/motion4';
 
 const Container = styled.section`
 	width: 100vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+	padding: 5rem;
 `;
 
 const Header = styled.header`
@@ -95,6 +97,7 @@ function App() {
 				<Motion1 />
 				<Motion2 />
 				<Motion3 />
+				<Motion4 />
 			</Container>
 		</>
 	);

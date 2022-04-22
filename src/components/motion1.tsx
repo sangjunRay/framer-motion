@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const BoxContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin: 3rem;
+	justify-self: center;
 `;
 
 const Card = styled(motion.div)`

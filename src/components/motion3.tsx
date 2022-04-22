@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const BoxContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin: 3rem;
+	justify-self: center;
 `;
 
 const Card = styled(motion.div)`
@@ -33,7 +33,7 @@ function Motion3(): JSX.Element {
 	return (
 		<BoxContainer>
 			Motion example 3.
-			<Card drag variants={cardVariants} whileHover="hover" whileDrag={{ scale: 0.9 }} whileTap="click">
+			<Card variants={cardVariants} whileHover="hover" whileDrag="drag" whileTap="click">
 				gesture motion (hover & click)
 			</Card>
 		</BoxContainer>
