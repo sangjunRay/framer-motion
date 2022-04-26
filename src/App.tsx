@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
+import FramerSlider from './components/framer-slider';
 import Motion1 from './components/motion1';
 import Motion2 from './components/motion2';
 import Motion3 from './components/motion3';
@@ -103,6 +104,7 @@ function App() {
 				<Motion5 />
 				<Motion6 />
 			</Container>
+			<FramerSlider />
 		</>
 	);
 }
