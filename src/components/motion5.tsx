@@ -31,7 +31,7 @@ const CardDraggable = styled(motion.div)`
 
 const Line = styled.div`
 	position: absolute;
-	width: 80%;
+	width: 90%;
 	top: 50%;
 	border-bottom: 6px solid rgb(100, 100, 100);
 `;
@@ -49,19 +49,20 @@ const Card = styled(motion.div)`
 	padding: 1rem;
 	cursor: pointer;
 	z-index: 10;
+	box-shadow: 4px 8px 12px rgb(70, 70, 70);
 `;
 
 function Motion5(): JSX.Element {
 	const x = useMotionValue(0);
-	const transformXOffset = useTransform(x, [-120, 0, 120], ['#c77f7f', 'rgb(255,255,255)', '#4ec981']);
+	const transformXOffset = useTransform(x, [-120, 0, 120], ['#db8080', 'rgb(255,255,255)', '#4ec981']);
 	return (
 		<BoxContainer>
 			<Window style={{ backgroundColor: transformXOffset }} />
-			Motion example 4.
+			Motion example 5.
 			<CardDraggable>
 				<Line />
 				<Card style={{ x }} drag="x" dragSnapToOrigin dragConstraints={{ left: -120, right: 120 }}>
-					↔️
+					↔
 				</Card>
 			</CardDraggable>
 		</BoxContainer>
